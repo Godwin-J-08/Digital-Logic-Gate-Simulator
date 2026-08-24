@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Logic Gate Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Digital Logic Gate Simulator</h1>
+
+        <div class="line"></div>
+
+        <h2>Select Logic Gate</h2>
+
+        <select id="gate">
+            <option value="AND">AND</option>
+            <option value="OR">OR</option>
+            <option value="NOT">NOT</option>
+            <option value="NAND">NAND</option>
+            <option value="NOR">NOR</option>
+            <option value="XOR">XOR</option>
+            <option value="XNOR">XNOR</option>
+        </select>
+
+        <div class="separator"></div>
+
+        <h2 class="section-title">INPUTS</h2>
+
+        <label for="inputA">Input A</label>
+
+        <select id="inputA">
+            <option value="0">0</option>
+            <option value="1">1</option>
+        </select>
+
+        <label for="inputB">Input B</label>
+
+        <select id="inputB">
+            <option value="0">0</option>
+            <option value="1">1</option>
+        </select>
+
+        <div class="separator"></div>
+
+        <button id="calculateButton">CALCULATE THE OUTPUT</button>
+
+        <div class="separator"></div>
+        <h2 class="section-title">LOGIC CIRCUIT</h2>
+
+<div class="circuit">
+
+    <div class="input-line">
+        <span>Input A</span>
+        <span class="value" id="displayA">0</span>
+    </div>
+
+    <div class="gate-box" id="gateDisplay">
+        AND
+    </div>
+
+    <div class="input-line input-b-line">
+        <span>Input B</span>
+        <span class="value" id="displayB">0</span>
+    </div>
+
+    <div class="output-line">
+        <span>OUTPUT</span>
+        <span class="value output-value" id="displayOutput">0</span>
+    </div>
+
+</div>
+
+<div class="separator"></div>
+
+<h2 class="section-title">OUTPUT</h2>
+
+<p id="output">Output will appear here</p>
+
+       
+    
+ 
+
+<h2 class="section-title">TRUTH TABLE</h2>
+
+<table id="truthTable">
+
+    <thead>
+        <tr>
+            <th>Input A</th>
+            <th>Input B</th>
+            <th>Output</th>
+        </tr>
+    </thead>
+
+    <tbody id="truthTableBody">
+    </tbody>
+
+</table>
+<div id="gateDiagram">
+
+    <div class="input-line">
+        <span>Input A</span>
+        <span class="wire"></span>
+    </div>
+
+    <div class="gate-symbol" id="gateSymbol">
+        AND
+    </div>
+
+    <div class="output-line">
+        <span class="wire"></span>
+        <span>Output</span>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
